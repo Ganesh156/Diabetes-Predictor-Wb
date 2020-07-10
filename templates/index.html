@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Diabetes Predictor</title>
+    <style>
+        body {
+            background-color: white;
+        }
+
+        header {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: larger;
+            background-color: black;
+            color: white;
+            padding: 20px;
+        }
+
+        .input-Text {
+            text-align: center;
+            margin: 30px 0;
+            flex: 1 0 auto;
+        }
+
+        .form-input {
+            text-align: center;
+            width: 350px;
+            height: 25px;
+            margin-bottom: 5px;
+        }
+
+        .pred-btn {
+            width: 100px;
+            height: 45px;
+            border-radius: 5px;
+        }
+
+        .pred-btn:hover {
+            background-color: green;
+            color: honeydew;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 100px;
+
+        }
+
+        .icons {
+            padding: 10px;
+        }
+
+        p {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>DIABETES PREDICTOR</h2>
+    </header>
+
+    <!-- Text Area -->
+    <div class="input-Text">
+        <form action="{{ url_for('predict') }}" method="POST">
+            <input class="form-input" type="text" name="pregnancies" placeholder="Number of Pregnancies eg. 0"><br>
+            <input class="form-input" type="text" name="glucose" placeholder="Glucose (mg/dL) eg. 80"><br>
+            <input class="form-input" type="text" name="bloodpressure" placeholder="Blood Pressure (mmHg) eg. 80"><br>
+            <input class="form-input" type="text" name="skinthickness" placeholder="Skin Thickness (mm) eg. 20"><br>
+            <input class="form-input" type="text" name="insulin" placeholder="Insulin Level (IU/mL) eg. 80"><br>
+            <input class="form-input" type="text" name="bmi" placeholder="Body Mass Index (kg/m²) eg. 23.1"><br>
+            <input class="form-input" type="text" name="dpf" placeholder="Diabetes Pedigree Function eg. 0.52"><br>
+            <input class="form-input" type="text" name="age" placeholder="Age (years) eg. 45"><br>
+
+            <input type="submit" class="pred-btn" value="Predict">
+        </form>
+    </div>
+
+    <div class="footer">
+        <a class="icons" href="https://github.com/Ganseh/Diabetes-Predictor-Web"><i class="fa fa-github"
+                aria-hidden="true"></i></a>
+        <a class="icons" href="https://www.linkedin.com/in/ganesh-hegde-2baaa6155/"><i class="fa fa-linkedin"
+                aria-hidden="true"></i></a>
+        <p>Devloped by Ganesh Hegde...Thank You..:)</p>
+
+    </div>
+</body>
+
+</html>
